@@ -10,15 +10,19 @@
     <style>
         .about-page-section {
             padding: 60px 0 100px;
+            width: 100%; /* ИСПРАВЛЕНИЕ: Растягиваем на всю ширину */
         }
         .about-intro {
             text-align: center;
             margin-bottom: 60px;
+            max-width: 900px; /* ИСПРАВЛЕНИЕ: Немного растянули текстовый блок */
+            margin-left: auto;
+            margin-right: auto;
         }
         .about-content-layout {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 50px; /* ИСПРАВЛЕНИЕ: Дали чуть больше воздуха между блоками */
         }
         .about-feature-card {
             display: flex;
@@ -62,6 +66,23 @@
             height: 70px;
             margin-bottom: 15px;
         }
+        
+        /* Стили для центрирования кнопки */
+        .about-cta-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .about-cta-btn {
+            display: inline-block;
+            font-size: 18px;
+            padding: 16px 45px;
+            box-shadow: 0 4px 15px rgba(26, 140, 42, 0.3); /* Легкая зеленая тень */
+        }
+        .about-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 140, 42, 0.4);
+        }
+
         @media (max-width: 768px) {
             .about-feature-card {
                 flex-direction: column;
@@ -99,7 +120,7 @@
             <div class="container">
                 <div class="about-intro">
                     <h2 class="dark-title" style="font-size: 36px;">«Почему именно бамбук?<br> Не маркетинг ли это?»</h2>
-                    <p style="font-size: 18px; max-width: 800px; margin: 0 auto;">Мы выбрали этот материал не случайно. Бамбук — это не просто красивое слово на упаковке, это реальный шаг к восстановлению экосистемы нашей планеты.</p>
+                    <p style="font-size: 18px;">Мы выбрали этот материал не случайно. Бамбук — это не просто красивое слово на упаковке, это реальный шаг к восстановлению экосистемы нашей планеты.</p>
                 </div>
 
                 <div class="about-content-layout">
@@ -135,6 +156,11 @@
                     </div>
 
                 </div>
+
+                <div class="about-cta-container">
+                    <a href="trial.html" class="cta-button dark-green-btn about-cta-btn">Заказать пробный набор</a>
+                </div>
+
             </div>
         </section>
     </main>

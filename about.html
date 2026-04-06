@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почему бамбук — MiBombo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .about-page-section {
+            padding: 60px 0 100px;
+        }
+        .about-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .about-content-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .about-feature-card {
+            display: flex;
+            background: var(--color-white);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            align-items: stretch;
+        }
+        .about-feature-image {
+            flex: 1;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        .about-feature-text {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-feature-text h3 {
+            color: var(--color-primary);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .about-icons-row {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .about-icon-block {
+            text-align: center;
+            flex: 1;
+            background: rgba(255,255,255,0.6);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .about-icon-block img {
+            height: 70px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .about-feature-card {
+                flex-direction: column;
+            }
+            .about-feature-image {
+                width: 100%;
+                min-height: 250px;
+            }
+            .about-icons-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body style="scroll-behavior: smooth;">
+
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="MiBombo Logo" class="nav-logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="style.html">Стили</a></li>
+                    <li><a href="about.html" class="active">Почему бамбук</a></li>
+                    <li><a href="trial.html">Пробный набор</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="full-height-header">
+        <section class="about-page-section">
+            <div class="container">
+                <div class="about-intro">
+                    <h2 class="dark-title" style="font-size: 36px;">«Почему именно бамбук?<br> Не маркетинг ли это?»</h2>
+                    <p style="font-size: 18px; max-width: 800px; margin: 0 auto;">Мы выбрали этот материал не случайно. Бамбук — это не просто красивое слово на упаковке, это реальный шаг к восстановлению экосистемы нашей планеты.</p>
+                </div>
+
+                <div class="about-content-layout">
+                    
+                    <div class="about-feature-card">
+                        <div class="about-feature-image" style="background-image: url('images/bamboo_forest.jpg');"></div>
+                        <div class="about-feature-text">
+                            <h3>Самое быстрорастущее растение</h3>
+                            <p>Бамбук вырастает до 20 метров всего за 3–5 лет. При этом ему не требуются искусственный полив, пестициды или химические удобрения, которые загрязняют почву.</p>
+                            <p>В отличие от обычного дерева, при срезе бамбук не гибнет — его корневая система остается нетронутой, и он продолжает расти, обновляя сам себя.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature-card" style="background: var(--color-mint);">
+                        <div class="about-feature-text" style="flex: 2;">
+                            <h3>Абсолютная безопасность и польза</h3>
+                            <p>Наша упаковка прочная, водостойкая и безопасна даже для горячих пищевых продуктов. А главное — она возвращается в природу, не оставляя после себя токсинов.</p>
+                            
+                            <div class="about-icons-row">
+                                <div class="about-icon-block">
+                                    <img src="images/co2.png" alt="CO2 Neutral">
+                                    <h4 style="color: var(--color-primary); margin-bottom: 10px;">CO₂ Нейтральность</h4>
+                                    <p style="font-size: 14px;">Бамбуковые плантации поглощают на 35% больше углекислого газа, чем деревья эквивалентной массы.</p>
+                                </div>
+                                
+                                <div class="about-icon-block">
+                                    <img src="images/recycle.png" alt="100% Recycle">
+                                    <h4 style="color: var(--color-primary); margin-bottom: 10px;">Полный распад</h4>
+                                    <p style="font-size: 14px;">В отличие от пластика, бамбуковое волокно полностью компостируется за 90 дней без микропластика.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 MiBombo. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

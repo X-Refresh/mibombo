@@ -3,107 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiBombo — Экологичная упаковка из бамбука</title>
+    <title>Главная — MiBombo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="glass-panel">
-                <h1>Четыре решения. Один материал.<br> Нулевой след на планеte.</h1>
-                <p>Наши изделия из бамбука — не просто упаковка. Это ваше заявление о ценности: экологичности, стиле и ответственности.</p>
-            </div>
-            
-            <div class="hero-image-container">
-                <img src="images/hero_products.jpg" alt="Продукция MiBombo" class="main-hero-img">
-                <div class="logo-overlay">
-                    <img src="images/logo.png" alt="MiBombo Logo">
-                </div>
-            </div>
+    <!-- Навигационное меню (будет на всех 4 страницах) -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="MiBombo Logo" class="nav-logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="style.html">Стили</a></li>
+                    <li><a href="about.html">Почему бамбук</a></li>
+                    <li><a href="trial.html">Пробный набор</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section class="style-selection">
-        <div class="container">
-            <div class="section-title-box">
-                <h2>Выберите свой стиль.<br> Выберите свою заботу.</h2>
-            </div>
-            
-            <div class="cards-grid">
-                <div class="card card-nature">
-                    <div class="card-text">
-                        <h3>«Я — природа»</h3>
-                        <p>Настоящий бамбук. Узлы, текстура, дыхание. Для тех, кто ценит аутентичность и хочет чувствовать связь с землёй.</p>
-                    </div>
-                    <img src="images/mug_nature.jpg" alt="Бамбуковая кружка">
+    <!-- Основной контент главной страницы -->
+    <main>
+        <section class="hero-section full-height">
+            <div class="container">
+                <div class="glass-panel">
+                    <h1>Четыре решения. Один материал.<br> Нулевой след на планете.</h1>
+                    <p>Наши изделия из бамбука — не просто упаковка. Это ваше заявление о ценности: экологичности, стиле и ответственности.</p>
                 </div>
                 
-                <div class="card card-style">
-                    <div class="card-text">
-                        <h3>«Я — стиль»</h3>
-                        <p>Чистые линии. Современный дизайн. Бамбуковая крышка. Для тех, кто не хочет жертвовать эстетикой ради экологии.</p>
-                    </div>
-                    <img src="images/mug_style.jpg" alt="Стильная кружка">
+                <div class="hero-image-container">
+                    <img src="images/hero_products.jpg" alt="Продукция MiBombo" class="main-hero-img">
                 </div>
             </div>
-            
-            <div class="centered-logo">
-                <img src="images/logo.png" alt="MiBombo Logo" class="footer-logo-small">
-            </div>
-        </div>
-    </section>
-
-    <section class="benefits-section">
-        <div class="container">
-            <h2 class="dark-title">«Почему именно бамбук?<br> Не маркетинг ли это?»</h2>
-
-            <div class="benefits-content">
-                <div class="benefit-item main-benefit">
-                    <img src="images/bamboo_forest.jpg" alt="Бамбуковый лес" class="benefit-bg">
-                    <div class="benefit-overlay-text">
-                        <p>Бамбук — не просто модный тренд. Это самое быстрорастущее растение на Земле: он вырастает до 20 метров всего за 3–5 лет.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-row">
-                    <div class="benefit-icons">
-                        <img src="images/co2.png" alt="CO2" class="icon-img">
-                        <img src="images/recycle.png" alt="Recycle" class="icon-img">
-                    </div>
-                    <div class="benefit-text-box">
-                        <p>Мы используем только сертифицированное бамбуковое волокно. Наша упаковка прочная, водостойкая и безопасна даже для пищевых продуктов.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="cta-info">
-                    <h3>Мы знаем: сменить упаковку — решение не из лёгких.</h3>
-                    <p>Поэтому предлагаем попробовать бесплатно — без подписки, без риска, без скрытых условий.</p>
-                    <ul class="cta-list">
-                        <li>Получите пробный набор из 4-х изделий:</li>
-                        <li>— контейнер,</li>
-                        <li>— кофейный стакан,</li>
-                        <li>— коробку для выноса.</li>
-                    </ul>
-                    <p>Протестируйте в реальных условиях. Если вы в восторге — давайте масштабировать.</p>
-                    <p class="cta-final">Это не продажа. Это приглашение в будущее.</p>
-                </div>
-                <div class="cta-image-side">
-                    <img src="images/trial_box.jpg" alt="Пробный набор">
-                    <div class="bottom-right-logo">
-                        <img src="images/logo.png" alt="MiBombo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 </body>
 </html>

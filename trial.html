@@ -6,6 +6,16 @@
     <title>Заказ — MiBombo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Исправляем размер реальных фотографий в карточках товаров */
+        .shop-item img {
+            width: 100% !important;
+            height: 200px !important;
+            object-fit: cover !important; /* Фото не сплющивается, а аккуратно обрезается */
+            border-radius: 12px !important;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body style="scroll-behavior: smooth;">
 
@@ -31,32 +41,32 @@
                 
                 <div class="products-section">
                     <h2 class="dark-title">Соберите свой набор</h2>
-                    <p>Добавьте нужные позиции в корзину.</p>
+                    <p>Добавьте нужные позиции в корзину для бесплатного тестирования.</p>
                     
                     <div class="shop-grid">
                         <div class="shop-item">
-                            <img src="images/icon_bowl.png" alt="Чаша">
-                            <h3>Бамбуковая Чаша</h3>
+                            <img src="images/trial_box.png" alt="Коробка" onerror="this.src='images/trial_box.jpg'">
+                            <h3>Пробный набор в коробке</h3>
                             <p class="price">Бесплатно (Тест)</p>
-                            <button class="add-to-cart-btn" data-name="Бамбуковая Чаша" data-price="0">Добавить</button>
+                            <button class="add-to-cart-btn" data-name="Набор в коробке" data-price="0">Добавить</button>
                         </div>
                         <div class="shop-item">
-                            <img src="images/icon_mug.png" alt="Кружка">
-                            <h3>Термокружка</h3>
+                            <img src="images/mug_nature.jpg" alt="Кружка Природа">
+                            <h3>Кружка «Я — природа»</h3>
                             <p class="price">Бесплатно (Тест)</p>
-                            <button class="add-to-cart-btn" data-name="Термокружка" data-price="0">Добавить</button>
+                            <button class="add-to-cart-btn" data-name="Кружка «Природа»" data-price="0">Добавить</button>
                         </div>
                         <div class="shop-item">
-                            <img src="images/icon_box.png" alt="Коробка">
-                            <h3>Коробка для выноса</h3>
+                            <img src="images/mug_style.jpg" alt="Кружка Стиль">
+                            <h3>Кружка «Я — стиль»</h3>
                             <p class="price">Бесплатно (Тест)</p>
-                            <button class="add-to-cart-btn" data-name="Коробка" data-price="0">Добавить</button>
+                            <button class="add-to-cart-btn" data-name="Кружка «Стиль»" data-price="0">Добавить</button>
                         </div>
                         <div class="shop-item">
-                            <img src="images/icon_tray.png" alt="Лоток">
-                            <h3>Лоток для еды</h3>
+                            <img src="images/hero_products.jpg" alt="Полная линейка">
+                            <h3>Полная линейка упаковки</h3>
                             <p class="price">Бесплатно (Тест)</p>
-                            <button class="add-to-cart-btn" data-name="Лоток" data-price="0">Добавить</button>
+                            <button class="add-to-cart-btn" data-name="Полная линейка" data-price="0">Добавить</button>
                         </div>
                     </div>
                 </div>

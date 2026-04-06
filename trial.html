@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ — MiBombo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="scroll-behavior: smooth;">
 
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.png" alt="MiBombo Logo" class="nav-logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="style.html">Стили</a></li>
+                    <li><a href="about.html">Почему бамбук</a></li>
+                    <li><a href="trial.html" class="active">Пробный набор</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="full-height-header shop-bg">
+        <div class="container">
+            <div class="shop-layout">
+                
+                <div class="products-section">
+                    <h2 class="dark-title">Соберите свой набор</h2>
+                    <p>Добавьте нужные позиции в корзину.</p>
+                    
+                    <div class="shop-grid">
+                        <div class="shop-item">
+                            <img src="images/icon_bowl.png" alt="Чаша">
+                            <h3>Бамбуковая Чаша</h3>
+                            <p class="price">Бесплатно (Тест)</p>
+                            <button class="add-to-cart-btn" data-name="Бамбуковая Чаша" data-price="0">Добавить</button>
+                        </div>
+                        <div class="shop-item">
+                            <img src="images/icon_mug.png" alt="Кружка">
+                            <h3>Термокружка</h3>
+                            <p class="price">Бесплатно (Тест)</p>
+                            <button class="add-to-cart-btn" data-name="Термокружка" data-price="0">Добавить</button>
+                        </div>
+                        <div class="shop-item">
+                            <img src="images/icon_box.png" alt="Коробка">
+                            <h3>Коробка для выноса</h3>
+                            <p class="price">Бесплатно (Тест)</p>
+                            <button class="add-to-cart-btn" data-name="Коробка" data-price="0">Добавить</button>
+                        </div>
+                        <div class="shop-item">
+                            <img src="images/icon_tray.png" alt="Лоток">
+                            <h3>Лоток для еды</h3>
+                            <p class="price">Бесплатно (Тест)</p>
+                            <button class="add-to-cart-btn" data-name="Лоток" data-price="0">Добавить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-section">
+                    <div class="cart-sticky-panel">
+                        <h2 class="dark-title">Ваша корзина</h2>
+                        
+                        <ul class="cart-items-list" id="cart-list">
+                            <li class="empty-cart-msg">Корзина пока пуста</li>
+                        </ul>
+                        
+                        <hr class="cart-divider">
+                        
+                        <form id="checkout-form" class="checkout-form">
+                            <label for="userName">Имя</label>
+                            <input type="text" id="userName" required placeholder="Ваше имя">
+                            
+                            <label for="userPhone">Телефон</label>
+                            <input type="tel" id="userPhone" required placeholder="+7 (___) ___-__-__">
+                            
+                            <button type="submit" class="cta-button dark-green-btn full-width-btn" id="submit-order-btn" disabled>Оформить заказ</button>
+                        </form>
+                        
+                        <div id="success-message" class="success-msg hidden">
+                            <p>✅ Спасибо! Ваш набор сформирован. Мы скоро свяжемся с вами.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 MiBombo. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

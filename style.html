@@ -6,10 +6,62 @@
     <title>Стили — MiBombo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .style-page-section {
+            padding: 60px 0 100px;
+            text-align: center;
+        }
+        .style-cards-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .style-card {
+            background: var(--color-white);
+            border-radius: 25px;
+            overflow: hidden;
+            flex: 1;
+            max-width: 480px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            border: 2px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .style-card:hover {
+            transform: translateY(-10px);
+        }
+        /* Акцентная рамка для карточки "Стиль" */
+        .style-card-accent {
+            border-color: var(--color-bright);
+        }
+        .style-card-text {
+            padding: 40px 30px 30px;
+            text-align: left;
+        }
+        .style-card-text h3 {
+            color: var(--color-primary);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .style-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .style-cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
-<body>
+<body style="scroll-behavior: smooth;">
 
-    <!-- Навигационное меню -->
     <header class="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
@@ -26,34 +78,41 @@
         </div>
     </header>
 
-    <!-- Основной контент страницы стилей -->
-    <main>
-        <section class="style-selection full-height">
-            <div class="container" style="text-align: center;">
-                <div class="section-title-box">
-                    <h2>Выберите свой стиль.<br> Выберите свою заботу.</h2>
+    <main class="full-height-header">
+        <section class="style-page-section">
+            <div class="container">
+                <div class="glass-panel" style="display: inline-block; padding: 20px 50px;">
+                    <h2 class="dark-title" style="margin-bottom: 0;">Выберите свой стиль.<br> Выберите свою заботу.</h2>
                 </div>
                 
-                <div class="cards-grid">
-                    <div class="card card-nature">
-                        <div class="card-text">
+                <div class="style-cards-container">
+                    <div class="style-card">
+                        <div class="style-card-text">
                             <h3>«Я — природа»</h3>
-                            <p>Настоящий бамбук. Узлы, текстура, дыхание.<br> Для тех, кто ценит аутентичность и хочет чувствовать связь с землёй.</p>
+                            <p>Настоящий бамбук. Узлы, текстура, дыхание.</p>
+                            <p>Для тех, кто ценит аутентичность и хочет чувствовать связь с землёй при каждом глотке.</p>
                         </div>
-                        <img src="images/mug_nature.jpg" alt="Бамбуковая кружка">
+                        <img src="images/mug_nature.jpg" alt="Бамбуковая кружка 'Природа'">
                     </div>
                     
-                    <div class="card card-style">
-                        <div class="card-text">
+                    <div class="style-card style-card-accent">
+                        <div class="style-card-text">
                             <h3>«Я — стиль»</h3>
-                            <p>Чистые линии. Современный дизайн. Бамбуковая крышка.<br> Для тех, кто не хочет жертвовать эстетикой ради экологии.</p>
+                            <p>Чистые линии. Современный дизайн. Бамбуковая крышка.</p>
+                            <p>Для тех, кто не хочет жертвовать эстетикой и минимализмом ради экологии.</p>
                         </div>
-                        <img src="images/mug_style.jpg" alt="Стильная кружка">
+                        <img src="images/mug_style.jpg" alt="Стильная кружка 'Стиль'">
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 MiBombo. Все права защищены.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

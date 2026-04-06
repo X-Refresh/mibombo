@@ -1,13 +1,15 @@
-/* Переменные из твоей палитры */
+/* --- ПЕРЕМЕННЫЕ И ПАЛИТРА --- */
 :root {
-    --primary-green: #1A8C2A;
-    --bright-green: #51C23D;
-    --light-lime: #C8FF82;
-    --soft-mint: #BFECCA;
-    --white: #FFFFFF;
-    --text-dark: #1a1a1a;
+    --color-primary: #1A8C2A;    /* Темно-зеленый (для лого, кнопок) */
+    --color-bright: #51C23D;     /* Яркий зеленый */
+    --color-lime: #C8FF82;       /* Салатовый */
+    --color-mint: #BFECCA;       /* Светло-мятный */
+    --color-white: #FFFFFF;
+    --color-text: #1a1a1a;
+    --color-bg-light: #F4F9F4;   /* Очень светло-зеленый фон */
 }
 
+/* --- ОБЩИЕ СТИЛИ --- */
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +18,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text-dark);
+    color: var(--color-text);
     line-height: 1.5;
-    background-color: var(--white);
+    background-color: var(--color-bg-light);
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,70 +30,109 @@ body {
     padding: 0 20px;
 }
 
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Кнопки */
+.cta-button {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-green-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.dark-green-btn:hover {
+    background-color: #157321;
+}
+
 /* --- ШАПКА И НАВИГАЦИЯ --- */
 .main-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: var(--color-white);
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
 .nav-logo {
-    height: 40px;
+    height: 36px;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--color-text);
     font-weight: 500;
-    transition: color 0.3s;
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: var(--primary-green);
+    color: var(--color-primary);
 }
 
-/* Общие стили для страниц на весь экран */
-.full-height {
-    min-height: calc(100vh - 70px); /* Вычитаем высоту шапки */
+/* Высота страницы с учетом шапки */
+.full-height-header {
+    min-height: calc(100vh - 60px);
     display: flex;
     align-items: center;
     padding: 40px 0;
 }
 
 /* --- ГЛАВНАЯ СТРАНИЦА (index.html) --- */
+
+/* Hero Section */
 .hero-section {
-    background-color: #f4f9f4;
+    background-size: cover;
+    background-position: center;
+    position: relative;
     text-align: center;
+}
+
+.hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .glass-panel {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
-    padding: 40px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-bottom: 40px;
+    padding: 30px 50px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.hero-image-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
+.hero-image-podium {
+    margin-bottom: 30px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .main-hero-img {
@@ -98,138 +140,134 @@ body {
     border-radius: 20px;
 }
 
-/* --- СТРАНИЦА СТИЛЕЙ (style.html) --- */
-.section-title-box {
-    background: var(--soft-mint);
-    padding: 20px 40px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.cards-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-.card {
-    background: var(--soft-mint);
-    border-radius: 25px;
-    overflow: hidden;
-    flex: 1;
-    max-width: 450px;
+.scroll-indicator {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.card-style {
-    border: 3px solid #007bff;
+.scroll-arrow {
+    font-size: 24px;
+    color: var(--color-text);
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
 }
 
-.card-text {
-    padding: 30px;
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    margin-top: auto;
-}
-
-/* --- СТРАНИЦА "ПОЧЕМУ БАМБУК" (about.html) --- */
-.benefits-section {
-    background-color: var(--soft-mint);
+/* MiBombo Путь и Продукция */
+.about-production-section {
+    padding: 80px 0;
 }
 
 .dark-title {
-    margin-bottom: 40px;
-    font-size: 28px;
+    margin-bottom: 30px;
+    color: var(--color-primary);
 }
 
-.benefits-content {
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.production-card {
+    background: var(--color-mint);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    border: 1px solid transparent;
 }
 
-.main-benefit {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
+.production-card:hover {
+    border-color: var(--color-bright);
 }
 
-.benefit-bg {
+.prod-icon {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Свяжитесь с Нами (Контакты) */
+.contacts-section {
+    padding: 80px 0;
+    background-color: var(--color-white);
+}
+
+.contacts-layout {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.contacts-info-side, .contacts-form-side {
+    flex: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-icon-img {
+    height: 24px;
+}
+
+.static-map-img {
     width: 100%;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+/* Форма */
+.contact-form label {
     display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--color-text);
 }
 
-.benefit-overlay-text {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 400px;
-}
-
-.benefit-row {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.benefit-text-box {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    flex: 1;
-}
-
-.icon-img {
-    height: 60px;
-}
-
-/* --- СТРАНИЦА CTA (trial.html) --- */
-.cta-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.cta-info {
-    flex: 1;
-}
-
-.cta-list {
-    list-style: none;
-    margin: 20px 0;
-}
-
-.cta-final {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.cta-image-side {
-    flex: 1;
-}
-
-.cta-image-side img {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    border-radius: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Футер */
+.main-footer {
+    background-color: var(--color-white);
+    padding: 20px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-container p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
 }
 
 /* Адаптив под мобилки */
 @media (max-width: 768px) {
-    .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-    .cards-grid, .cta-wrapper, .benefit-row {
-        flex-direction: column;
-    }
+    .header-container { flex-direction: column; }
+    .main-nav ul { flex-direction: column; text-align: center; gap: 10px; margin-top: 10px; }
+    .production-grid { grid-template-columns: 1fr; }
+    .contacts-layout { flex-direction: column; }
 }

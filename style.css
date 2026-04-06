@@ -131,13 +131,16 @@ p {
 
 .hero-image-podium {
     margin-bottom: 30px;
-    max-width: 800px;
+    max-width: 600px; /* ИСПРАВЛЕНО: Уменьшена максимальная ширина */
     width: 100%;
 }
 
 .main-hero-img {
     width: 100%;
+    height: 350px; /* ИСПРАВЛЕНО: Ограничена высота */
+    object-fit: cover; /* ИСПРАВЛЕНО: Картинка не сплющивается */
     border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* ИСПРАВЛЕНО: Добавлена тень */
 }
 
 .scroll-indicator {
@@ -192,7 +195,8 @@ p {
 }
 
 .prod-icon {
-    height: 50px;
+    height: 60px !important; /* ИСПРАВЛЕНО: Жесткая фиксация высоты */
+    width: auto; /* ИСПРАВЛЕНО: Автоматическая ширина */
     margin-bottom: 20px;
 }
 
@@ -271,6 +275,7 @@ p {
     .production-grid { grid-template-columns: 1fr; }
     .contacts-layout { flex-direction: column; }
 }
+
 /* --- СТРАНИЦА МАГАЗИНА / КОРЗИНЫ (trial.html) --- */
 .shop-bg {
     background-color: var(--color-bg-light);

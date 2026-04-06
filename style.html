@@ -11,18 +11,20 @@
         .style-page-section {
             padding: 60px 0 100px;
             text-align: center;
+            width: 100%; /* ИСПРАВЛЕНИЕ: Растягиваем на всю ширину */
         }
         .style-cards-container {
             display: flex;
             gap: 40px;
             justify-content: center;
             margin-top: 50px;
+            flex-wrap: wrap; /* ИСПРАВЛЕНИЕ: Перенос на малых экранах */
         }
         .style-card {
             background: var(--color-white);
             border-radius: 25px;
             overflow: hidden;
-            flex: 1;
+            flex: 1 1 300px; /* ИСПРАВЛЕНИЕ: Позволяем карточкам сжиматься и расти */
             max-width: 480px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             display: flex;
@@ -51,12 +53,6 @@
             height: auto;
             display: block;
             margin-top: auto;
-        }
-        @media (max-width: 768px) {
-            .style-cards-container {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>

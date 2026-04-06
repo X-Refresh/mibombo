@@ -7,13 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="scroll-behavior: smooth;">
 
-    <!-- Навигационное меню (будет на всех 4 страницах) -->
     <header class="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="MiBombo Logo" class="nav-logo">
+                <img src="images/logo_block.png" alt="MiBombo Logo Block" class="nav-logo">
             </a>
             <nav class="main-nav">
                 <ul>
@@ -26,21 +25,97 @@
         </div>
     </header>
 
-    <!-- Основной контент главной страницы -->
     <main>
-        <section class="hero-section full-height">
-            <div class="container">
+        <section class="hero-section full-height-header" style="background-image: url('images/hero_background.jpg');">
+            <div class="container hero-layout">
                 <div class="glass-panel">
                     <h1>Четыре решения. Один материал.<br> Нулевой след на планете.</h1>
                     <p>Наши изделия из бамбука — не просто упаковка. Это ваше заявление о ценности: экологичности, стиле и ответственности.</p>
                 </div>
                 
-                <div class="hero-image-container">
-                    <img src="images/hero_products.jpg" alt="Продукция MiBombo" class="main-hero-img">
+                <div class="hero-image-podium">
+                    <img src="images/products_on_podium.png" alt="MiBombo Products on Podium" class="main-hero-img">
+                </div>
+                
+                <div class="scroll-indicator">
+                    <a href="#about" class="scroll-arrow">&darr;</a>
+                    <span>Прокрутите для истории</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-production-section">
+            <div class="container">
+                <h2 class="dark-title">MiBombo: Наш Путь и Продукция</h2>
+                <p>Мы начали с простой идеи: сделать экологичность стильной и доступной... Мы производим широкий спектр изделий из бамбукового волокна, каждое из которых создано с заботой о вас и о планете.</p>
+                
+                <div class="production-grid">
+                    <div class="production-card">
+                        <img src="images/icon_bowl.png" alt="Bowl" class="prod-icon">
+                        <h3>Многоразовые Чаши</h3>
+                        <p>Прочные и термостойкие.</p>
+                    </div>
+                    <div class="production-card">
+                        <img src="images/icon_mug.png" alt="Mug" class="prod-icon">
+                        <h3>Термокружки для Кофе</h3>
+                        <p>С бамбуковой крышкой.</p>
+                    </div>
+                    <div class="production-card">
+                        <img src="images/icon_box.png" alt="Box" class="prod-icon">
+                        <h3>Подарочные Наборы</h3>
+                        <p>В стильной упаковке.</p>
+                    </div>
+                    <div class="production-card">
+                        <img src="images/icon_tray.png" alt="Tray" class="prod-icon">
+                        <h3>Лотки и Контейнеры</h3>
+                        <p>Идеально для еды.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="container contacts-layout">
+                <div class="contacts-info-side">
+                    <h2 class="dark-title">Свяжитесь с Нами</h2>
+                    <div class="contact-item">
+                        <img src="images/icon_home.png" alt="Home" class="contact-icon-img">
+                        <span>Улица Бамбуковая, д. 10</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/icon_phone.png" alt="Phone" class="contact-icon-img">
+                        <span>+7 (900) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/icon_mail.png" alt="Email" class="contact-icon-img">
+                        <span>info@mibombo.ru</span>
+                    </div>
+                    <img src="images/static_map.png" alt="Static Map" class="static-map-img">
+                </div>
+                
+                <div class="contacts-form-side">
+                    <form action="#" method="post" class="contact-form">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов">
+                        
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="ivan@mail.ru">
+                        
+                        <label for="message">Ваше сообщение</label>
+                        <textarea id="message" name="message" placeholder="Напишите здесь..."></textarea>
+                        
+                        <button type="submit" class="cta-button dark-green-btn">Отправить</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; 2024 MiBombo. Все права защищены.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
